@@ -1,0 +1,17 @@
+{% extends 'posts/base.html' %}
+{% block content %}
+<article class="about-section py-5">
+    <div class="container">
+        <h2 class="title mb-3">{{ post.title }}</h2>
+        
+        <p>{{ post.published }}</p>
+        <figure><img class="img-fluid" src="{{ post.image.url }}" alt="image" style='max-width: 500px;'></figure>
+        <h5 class="mt-5">Contents</h5>
+        <p>{{ post.body }}</p>
+        <h5 class="mt-5">Experiences</h5>
+        <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Architecto, commodi optio ea suscipit maxime illum voluptatem. Unde sequi, reiciendis, necessitatibus accusamus ipsum sapiente dignissimos ad soluta dolore totam sunt laudantium.</p>
+        <h5 class="mt-5">thoughts</h5>
+        <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Atque sit exercitationem architecto delectus ex natus, nihil vero accusantium magni assumenda nemo aperiam est consequuntur dolorum repudiandae totam voluptatibus nobis quisquam.</p>
+    </div>
+</article>
+{% endblock content %}

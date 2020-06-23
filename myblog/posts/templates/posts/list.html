@@ -1,0 +1,30 @@
+{% extends 'posts/base.html' %}
+{% block content %}
+<div class="container">
+    <h1 class="text-center mt-3">ようこそ、NMのブログへ！</h1>
+    {% load static %}
+    <img src="{% static 'posts/shoe.jpeg' %}" class="img-fluid rounded mx-auto d-block" style="max-height: 200px;">
+
+
+    <h3>最新の投稿</h3>
+    {% for post in object_list %}
+    <section class="blog-list px-3 py-5 p-md-5">
+        <div class="container">
+            <div class="item mb-5">
+                <div class="media">
+                    <img class="mr-3 img-fluid rounded post-thumb d-none d-md-flex" src="{{ post.image.url }}" alt="image" style='width: 200px;'>
+                    <div class="media-body">
+                        <h3 class="title mb-1"><a href="{% url 'posts:post_detail' post.id %}">{{ post.title }}</a></h3>
+                        <div class="meta mb-1"><span class="date">{{ post.published }}</span><span class="time">： 1 min read</span></div>
+                        <div class="intro">{{ post.summary }}</div>
+                        <a class="more-link" href="{% url 'posts:post_detail' post.id %}">Read more &rarr;</a>
+                    </div><!--//media-body-->
+                </div><!--//media-->
+            </div><!--//item-->            
+        </div>
+        <hr>
+    </section>
+
+    {% endfor %}
+</div>
+{% endblock content %}
