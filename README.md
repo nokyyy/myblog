@@ -6,7 +6,7 @@ myblogのサイトIPアドレスです
  
 # Features
 
-PythonのDjangoを使用した、webアプリです。<br>
+試作で、PythonのDjangoを使用した、webアプリです。<br>
 ブログ一覧・ブログ詳細・検索されたページ一覧・adminの４つを作りました。これから更に機能を追加していく予定です。
 
 # Author
